@@ -1,39 +1,56 @@
 <?php
 class Login extends CI_Controller {
 
-  public function view($page = 'login')
-  {
-    if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
-    {
-      // Whoops, we don't have a page for that!
-      show_404();
-    }
+   public function __construct()
+   {
+      parent::__construct();
+      $this->load->model('UsuariosModel');
+      $this->load->helper('url_helper');
+   }
 
-    $data['title'] = ucfirst($page); // Capitalize the first letter
+   public function view($page = 'login')
+   {
+      if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
+      {
+         // Whoops, we don't have a page for that!
+         show_404();
+      }
 
-    $this->load->view('templates/header', $data);
-    $this->load->view('pages/'.$page, $data);
-    $this->load->view('templates/footer', $data);
-  }
+      $data['title'] = ucfirst($page); // Capitalize the first letter
 
-  public function entrar()
-  {
-    $this->load->helper('form');
-    $this->load->library('form_validation');
+      $this->load->view('templates/header', $data);
+      $this->load->view('pages/'.$page, $data);
+      $this->load->view('templates/footer', $data);
+   }
 
-    //$data['title'] = 'Create a news item';
+   public function index()
+   {
+      $data['news'] = $this->UsuariosModel->getUsuarios();
+      $data['title'] = 'Lista de Usuarios';
 
-    $this->form_validation->set_rules('username', 'Usuário', 'required');
-    $this->form_validation->set_rules('pass', 'Senha', 'required');
+      $this->load->view('templates/header', $data);
+      $this->load->view('news/index', $data);
+      $this->load->view('templates/footer');
+   }
 
-    if ($this->form_validation->run() === FALSE)
-    {
-        $this->load->view('templates/header', $data);
-        $this->load->view('pages/login');
-        $this->load->view('templates/footer');
-    } else {
-        $this->news_model->set_news();
-        $this->load->view('pages/home');
-    }
-  }
+   public function entrar()
+   {
+      $this->load->helper('form');
+      $this->load->library('form_validation');
+
+      //$data['title'] = 'Create a news item';
+
+      $this->form_validation->set_rules('username', 'Usuário', 'required');
+      $this->form_validation->set_rules('pass', 'Senha', 'required');
+
+      if ($this->form_validation->run() === FALSE)
+      {
+         $this->load->view('templates/header', $data);
+         $this->load->view('pages/login');
+         $this->load->view('templates/footer');
+      } else {
+         $this->news_model->set_news();
+         $this->load->view('pages/home');
+      }
+   }
 }
