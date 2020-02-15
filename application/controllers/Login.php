@@ -57,6 +57,10 @@ class Login extends CI_Controller {
 
    public function entrar()
    {
+      if ($this->input->post('cadastro') !== NULL) {
+         $this->load->helper('url');
+         redirect('/cadastro/index');
+      }
       $username = $this->input->post('username');
       $password = $this->input->post('password');
       if ($this->UsuariosModel->validarUsuario($username, $password)) {
@@ -72,5 +76,15 @@ class Login extends CI_Controller {
          $this->load->view('pages/login', ['message' => "Usuário/Senha não encontrados"]);
          $this->load->view('templates/footer');
       }
+   }
+
+   public function cadastrar()
+   {
+      $this->load->helper('form');
+      $this->load->library('form_validation');
+      $data['title'] = "Cadastro";
+      $this->load->view('templates/header', $data);
+      $this->load->view('pages/cadastro');
+      $this->load->view('templates/footer');
    }
 }
