@@ -16,12 +16,16 @@ class UsuariosModel extends CI_Model {
    {
       $where = [
          'nm_login' => $username,
-         'pw_senha' => $password
       ];
       $query = $this->db->select('id_usuario');
       $query = $this->db->from('usuarios');
       $query = $this->db->where($where);
-      return ($query->count_all_results() === 1);
+      if ($query->count_all_results() === 1) {
+         $sql = "SELECT pw_senha FROM usuarios WHERE nm_login = ?";
+         $query = $this->db->query($sql, [$username]);
+         return password_verify($password, $query->row(0)->pw_senha);
+      }
+      return false;
    }
 
    public function jaExisteUsuario($username) : bool
