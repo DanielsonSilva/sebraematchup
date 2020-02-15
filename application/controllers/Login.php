@@ -43,8 +43,6 @@ class Login extends CI_Controller {
       $this->load->helper('form');
       $this->load->library('form_validation');
 
-      //$data['title'] = 'Create a news item';
-
       $this->form_validation->set_rules('username', 'Usuário', 'required');
       $this->form_validation->set_rules('pass', 'Senha', 'required');
 
@@ -54,9 +52,25 @@ class Login extends CI_Controller {
          $this->load->view('templates/header', $data);
          $this->load->view('pages/login');
          $this->load->view('templates/footer');
+      }
+   }
+
+   public function entrar()
+   {
+      $username = $this->input->post('username');
+      $password = $this->input->post('password');
+      if ($this->UsuariosModel->validarUsuario($username, $password)) {
+         $data['title'] = "Sucesso";
+         $this->load->view('templates/header', $data);
+         $this->load->view('pages/sucesso');
+         $this->load->view('templates/footer');
       } else {
-         $this->news_model->set_news();
-         $this->load->view('pages/home');
+         $this->load->helper('form');
+         $this->load->library('form_validation');
+         $data['title'] = "Entrar";
+         $this->load->view('templates/header', $data);
+         $this->load->view('pages/login', ['message' => "Usuário/Senha não encontrados"]);
+         $this->load->view('templates/footer');
       }
    }
 }
