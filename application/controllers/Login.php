@@ -16,6 +16,11 @@ class Login extends CI_Controller {
          show_404();
       }
 
+      if ($page == "usuarios") {
+         $this->index();
+         return true;
+      }
+
       $data['title'] = ucfirst($page); // Capitalize the first letter
 
       $this->load->view('templates/header', $data);
@@ -23,17 +28,17 @@ class Login extends CI_Controller {
       $this->load->view('templates/footer', $data);
    }
 
-   public function index()
+   public function listaUsuarios()
    {
-      $data['news'] = $this->UsuariosModel->getUsuarios();
+      $data['usuarios'] = $this->UsuariosModel->getUsuarios();
       $data['title'] = 'Lista de Usuarios';
 
       $this->load->view('templates/header', $data);
-      $this->load->view('news/index', $data);
+      $this->load->view('pages/usuarios', $data);
       $this->load->view('templates/footer');
    }
 
-   public function entrar()
+   public function index()
    {
       $this->load->helper('form');
       $this->load->library('form_validation');
@@ -45,6 +50,7 @@ class Login extends CI_Controller {
 
       if ($this->form_validation->run() === FALSE)
       {
+         $data['title'] = "Entrar";
          $this->load->view('templates/header', $data);
          $this->load->view('pages/login');
          $this->load->view('templates/footer');
