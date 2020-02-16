@@ -12,7 +12,7 @@ class UsuariosModel extends CI_Model {
       return $query->result_array();
    }
 
-   public function validarUsuario($username, $password) : bool
+   public function validarUsuario($username, $password)
    {
       $where = [
          'nm_email' => $username,
@@ -21,9 +21,11 @@ class UsuariosModel extends CI_Model {
       $query = $this->db->from('usuarios');
       $query = $this->db->where($where);
       if ($query->count_all_results() === 1) {
-         $sql = "SELECT pw_senha FROM usuarios WHERE nm_email = ?";
+         $sql = "SELECT id_usuario, pw_senha FROM usuarios WHERE nm_email = ?";
          $query = $this->db->query($sql, [$username]);
-         return password_verify($password, $query->row(0)->pw_senha);
+         if (password_verify($password, $query->row(0)->pw_senha)) {
+            return $query->row(0)->id_usuario;
+         }
       }
       return false;
    }

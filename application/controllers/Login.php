@@ -6,6 +6,8 @@ class Login extends CI_Controller {
       parent::__construct();
       $this->load->model('UsuariosModel');
       $this->load->helper('url_helper');
+      $this->load->helper('url');
+      $this->load->library('session');
    }
 
    public function view($page = 'login')
@@ -61,17 +63,13 @@ class Login extends CI_Controller {
    public function entrar()
    {
       if ($this->input->post('cadastro') !== NULL) {
-         $this->load->helper('url');
          redirect('/cadastro/index');
       }
       $username = $this->input->post('username');
       $password = $this->input->post('password');
-      if ($this->UsuariosModel->validarUsuario($username, $password)) {
-         $data['title'] = "Sucesso";
-         $this->load->view('templates/header', $data);
-         $this->load->view('templates/NaveBarPaginaInicial', $data);
-         $this->load->view('pages/sucesso');
-         $this->load->view('templates/footer');
+      if ($idUsuario = $this->UsuariosModel->validarUsuario($username, $password)) {
+         $this->session->set_flashdata('id_usuario', $idUsuario);
+         redirect('/gerenciador/index');
       } else {
          $this->load->helper('form');
          $this->load->library('form_validation');
