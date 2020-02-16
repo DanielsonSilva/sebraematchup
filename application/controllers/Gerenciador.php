@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__) . '/../models/entity/Usuario.php';
+require_once dirname(__FILE__) . '/../models/entity/UsuarioDTO.php';
 
 class Gerenciador extends CI_Controller {
 

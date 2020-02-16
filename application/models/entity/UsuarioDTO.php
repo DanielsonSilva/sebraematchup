@@ -1,6 +1,6 @@
 <?php
 
-class Usuario {
+class UsuarioDTO {
 
    public $id;
    public $login;

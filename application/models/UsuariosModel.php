@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__) . '/entity/Usuario.php';
+require_once dirname(__FILE__) . '/entity/UsuarioDTO.php';
 
 class UsuariosModel extends CI_Model {
 
@@ -67,11 +67,11 @@ class UsuariosModel extends CI_Model {
       return $this->db->insert('usuarios', $data);
    }
 
-   public function getUsuario($idUsuario) : Usuario
+   public function getUsuario($idUsuario) : UsuarioDTO
    {
       $sql = "SELECT * FROM usuarios WHERE id_usuario = ?";
       $query = $this->db->query($sql, [$idUsuario]);
-      $objUsuario = new Usuario([
+      $objUsuario = new UsuarioDTO([
          'id_usuario' => $query->row(0)->id_usuario,
          'nm_login' => $query->row(0)->nm_login,
          'nm_email' => $query->row(0)->nm_email,
