@@ -2,6 +2,21 @@ CREATE TABLE `usuarios` (
   `id_usuario` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `nm_login` varchar(50) NOT NULL,
   `pw_senha` varchar(256) NOT NULL,
+  `nm_email` varchar(100) NOT NULL,
+  `nm_nome` varchar(100) DEFAULT NULL,
+  `nu_celular` varchar(100) DEFAULT NULL,
+  `nu_outrocontato` varchar(100) DEFAULT NULL,
+  `nu_cpf` varchar(100) DEFAULT NULL,
+  `nu_rg` varchar(100) DEFAULT NULL,
+  `nm_orgao` varchar(100) DEFAULT NULL,
+  `nm_orgao_estado` varchar(100) DEFAULT NULL,
+  `nm_endereco` varchar(100) DEFAULT NULL,
+  `nu_residencia` varchar(100) DEFAULT NULL,
+  `nm_enderecocomplemento` varchar(100) DEFAULT NULL,
+  `nm_enderecobairro` varchar(100) DEFAULT NULL,
+  `nm_cidade` varchar(100) DEFAULT NULL,
+  `nm_estado` varchar(100) DEFAULT NULL,
+  `nu_cep` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `usuarios_un` (`nm_login`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='Tabela dos usuários';
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COMMENT='Tabela dos usuários';
