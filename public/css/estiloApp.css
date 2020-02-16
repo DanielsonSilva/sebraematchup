@@ -1,0 +1,38 @@
+#barranav{   
+    /*background-image: url("/app_help_box/public/img/bgnav.jpg");*/
+    background-color: #A9F5F2;
+}
+
+#tituloPg{
+
+    color: blue;
+    text-align: center;
+
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.caixa2{
+    /*background-image: url("/app_help_box/public/img/papelParedeRB1.png");*/
+    background-repeat: repeat-y ;
+    background-size: 100%;
+    background-color: rgba(16, 46, 41, 0.486);
+    
+
+}
+
+.formularioRB{
+  
+    margin:auto;
+    padding-top: 20px;
+    width: 80%;
+    
+}
+
+
