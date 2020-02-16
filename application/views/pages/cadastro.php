@@ -24,8 +24,8 @@
 
       <div class="form-group">
          <?php
-         echo form_label('Senha','formGrupNomeDoUsuario');
-         echo form_input(array(
+         echo form_label('Senha','formGrupSenha');
+         echo form_password(array(
             'name'=>'password',
             'id'=>'pass',
             'class'=>'form-control',
@@ -60,32 +60,6 @@
          ?>
          <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
 
-      </div>
-
-      <div class="form-group">
-         <?php
-         echo form_label ('Senha','exampleInputPassword1');
-         echo form_input (array(
-            'name'=>'senha',
-            'type'=>'password',
-            'class'=>'form-control',
-            'id'=>'exampleInputPassword1',
-            'placeholder'=>'Senha',
-         ));
-         ?>
-      </div>
-
-      <div class="form-group">
-         <?php
-         echo form_label('Confirma Senha','exampleInputPassword2');
-         echo form_input(array(
-            'name'=>'confirmaSenha',
-            'type'=>'password',
-            'class'=>'form-control',
-            'id'=>'exampleInputPassword2',
-            'placeholder'=>'Confirma Senha',
-         ));
-         ?>
       </div>
 
       <div class="form-row">
@@ -234,7 +208,7 @@
             <?php
             echo form_label('Complemento', 'inputcompremento');
             echo form_input(array(
-               'name'=>'compremento',
+               'name'=>'complemento',
                'type'=>'text',
                'class'=>'form-control',
                'id'=>'inputCompremento',
