@@ -1,4 +1,6 @@
 <?php
+require_once dirname(__FILE__) . '/entity/Usuario.php';
+
 class UsuariosModel extends CI_Model {
 
    public function __construct()
@@ -63,6 +65,32 @@ class UsuariosModel extends CI_Model {
          'nu_cep' => $data['cep'],
       ];
       return $this->db->insert('usuarios', $data);
+   }
+
+   public function getUsuario($idUsuario) : Usuario
+   {
+      $sql = "SELECT * FROM usuarios WHERE id_usuario = ?";
+      $query = $this->db->query($sql, [$idUsuario]);
+      $objUsuario = new Usuario([
+         'id_usuario' => $query->row(0)->id_usuario,
+         'nm_login' => $query->row(0)->nm_login,
+         'nm_email' => $query->row(0)->nm_email,
+         'nm_nome' => $query->row(0)->nm_nome,
+         'nu_celular' => $query->row(0)->nu_celular,
+         'nu_outrocontato' => $query->row(0)->nu_outrocontato,
+         'nu_cpf' => $query->row(0)->nu_cpf,
+         'nu_rg' => $query->row(0)->nu_rg,
+         'nm_orgao' => $query->row(0)->nm_orgao,
+         'nm_orgao_estado' => $query->row(0)->nm_orgao_estado,
+         'nm_endereco' => $query->row(0)->nm_endereco,
+         'nu_residencia' => $query->row(0)->nu_residencia,
+         'nm_enderecocomplemento' => $query->row(0)->nm_enderecocomplemento,
+         'nm_enderecobairro' => $query->row(0)->nm_enderecobairro,
+         'nm_cidade' => $query->row(0)->nm_cidade,
+         'nm_estado' => $query->row(0)->nm_estado,
+         'nu_cep' => $query->row(0)->nu_cep
+      ]);
+      return $objUsuario;
    }
 
 }

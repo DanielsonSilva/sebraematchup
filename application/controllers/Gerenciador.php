@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__FILE__) . '/../models/entity/Usuario.php';
 
 class Gerenciador extends CI_Controller {
 
@@ -14,6 +15,15 @@ class Gerenciador extends CI_Controller {
    public function index()
    {
       $idUsuario = $this->session->flashdata('id_usuario');
+      $objUsuarioLogado = $this->UsuariosModel->getUsuario($idUsuario);
+
+      $data['title'] = 'Perfil';
+      $data['usuarioLogado'] = $objUsuarioLogado;
+
+      $this->load->view('templates/header', $data);
+      $this->load->view('templates/NaveBarPaginaInicial', $data);
+      $this->load->view('pages/gerenciador', $data);
+      $this->load->view('templates/footer', $data);
    }
 
 }
