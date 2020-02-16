@@ -17,6 +17,7 @@ class Cadastro extends CI_Controller {
    private function view($title, $data = null) {
       $this->load->library('form_validation');
       $this->load->view('templates/header', ['title' => 'Cadastro']);
+      $this->load->view('templates/NaveBarPaginaCadastro', $data);
       $this->load->view('pages/cadastro', $data);
       $this->load->view('templates/footer');
    }

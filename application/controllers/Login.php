@@ -24,6 +24,7 @@ class Login extends CI_Controller {
       $data['title'] = ucfirst($page); // Capitalize the first letter
 
       $this->load->view('templates/header', $data);
+      $this->load->view('templates/NaveBarPaginaInicial', $data);
       $this->load->view('pages/'.$page, $data);
       $this->load->view('templates/footer', $data);
    }
@@ -34,6 +35,7 @@ class Login extends CI_Controller {
       $data['title'] = 'Lista de Usuarios';
 
       $this->load->view('templates/header', $data);
+      $this->load->view('templates/NaveBarPaginaInicial', $data);
       $this->load->view('pages/usuarios', $data);
       $this->load->view('templates/footer');
    }
@@ -50,6 +52,7 @@ class Login extends CI_Controller {
       {
          $data['title'] = "Entrar";
          $this->load->view('templates/header', $data);
+         $this->load->view('templates/NaveBarPaginaInicial', $data);
          $this->load->view('pages/login');
          $this->load->view('templates/footer');
       }
@@ -66,6 +69,7 @@ class Login extends CI_Controller {
       if ($this->UsuariosModel->validarUsuario($username, $password)) {
          $data['title'] = "Sucesso";
          $this->load->view('templates/header', $data);
+         $this->load->view('templates/NaveBarPaginaInicial', $data);
          $this->load->view('pages/sucesso');
          $this->load->view('templates/footer');
       } else {
@@ -73,6 +77,7 @@ class Login extends CI_Controller {
          $this->load->library('form_validation');
          $data['title'] = "Entrar";
          $this->load->view('templates/header', $data);
+         $this->load->view('templates/NaveBarPaginaInicial', $data);
          $this->load->view('pages/login', ['message' => "Usuário/Senha não encontrados"]);
          $this->load->view('templates/footer');
       }
@@ -84,6 +89,7 @@ class Login extends CI_Controller {
       $this->load->library('form_validation');
       $data['title'] = "Cadastro";
       $this->load->view('templates/header', $data);
+      $this->load->view('templates/NaveBarPaginaInicial', $data);
       $this->load->view('pages/cadastro');
       $this->load->view('templates/footer');
    }
