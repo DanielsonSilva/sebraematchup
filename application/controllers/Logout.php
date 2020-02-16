@@ -12,7 +12,7 @@ class Logout extends CI_Controller {
 
    public function index() {
       unset($_SESSION);
-      redirect('/');
+      redirect('/Login/');
    }
 
 }

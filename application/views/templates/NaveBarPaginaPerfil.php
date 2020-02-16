@@ -29,7 +29,7 @@
                      </li>
                      <li class="nav-item">
                      <button class="btn-warning">
-                        <a class="nav-link" href="http://localhost/Logout/">Logout</a>
+                        <?= anchor('Logout', 'Logout', array('class' => 'nav-link')); ?>
                      </button>
                      </li>
                   </ul>
