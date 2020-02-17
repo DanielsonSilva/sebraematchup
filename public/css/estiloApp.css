@@ -35,4 +35,25 @@ html,body{
     
 }
 
+.collapse-content .fa.fa-heart:hover {
+    color: #f44336 !important;
+  }
+  .collapse-content .fa.fa-share-alt:hover {
+    color: #0d47a1 !important;
+  }
 
+
+
+  /*estilo mapa*/
+
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 300px;
+      }
+      /* Optional: Makes the sample page fill the window.
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }*/

@@ -6,7 +6,7 @@
         <!-- Logo -->
     <div class="container" >
         <div id="img-logo">
-            <img src="../public/img/sebrae-logo-2.jpg" width="70px">
+            <img src="../../public/img/sebrae-logo-2.jpg" width="70px">
            
      
         </div>
