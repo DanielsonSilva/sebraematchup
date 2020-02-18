@@ -28,7 +28,9 @@
                         <a class="nav-link" href="http://localhost/index.php/contato">Preciso de ajuda</a>
                      </li>
                      <li class="nav-item">
+                     <button class="btn-warning">
                         <a class="nav-link" href="http://localhost/Logout/">Logout</a>
+                     </button>
                      </li>
                   </ul>
                </div>
