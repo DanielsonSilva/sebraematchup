@@ -6,7 +6,7 @@
                <div class="row">
                   
                      <div class="col-sm-2">
-                         <img id="imgPerfil" src="../../public/img/sebrae-logo-2.jpg" width="120px">
+                         <img id="imgPerfil" src="../../public/img/avatar.jpeg" width="120px">
                      </div>
                      <div class="col-10">
                         <h2> <label for="Nome"> <?= $usuarioLogado->nome ?></label></h2>
@@ -191,7 +191,7 @@
                               <div>
 
                                  <!-- Title -->
-                                 <h4 class="card-title font-weight-bold mb-2">Dica para se tornar ei</h4>
+                                 <h4 class="card-title font-weight-bold mb-2">Dica para se tornar Mei</h4>
                                  <!-- Subtitle -->
                                  <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
 
@@ -250,7 +250,7 @@
 </section>
 
 
-
+<!--
 <section class="caixa1">
    <div class="container ">
       <div class="row">
@@ -283,4 +283,4 @@
    </div>
 </section>
 
-
+-->
