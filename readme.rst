@@ -1,70 +1,59 @@
 ###################
-What is CodeIgniter
+Sebrae Match Up
 ###################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Sebrae Match Up é uma solução para facilitar a comunicação entre as pessoas que
+estão iniciando seu empreendimento e seus possíveis usuários de forma segura.
+Os empreendedores podem se comunicar com especilistas do Sebrae e com a comunidade
+de outros empreendedores para resolução de dúvidas e problemas para que seu negócio
+possa prosperar por mais tempo.
 
 *******************
-Release Information
+Tecnologia utilizada
 *******************
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+O site utilizou de componentes responsivos da biblioteca do Bootstrap para suas
+funcionalidades de front-end. Para criação da lógica do sistema e conexão com o banco
+foi utilizado o framework CodeIgniter versão 3.1.11.
 
-**************************
-Changelog and New Features
-**************************
-
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+A base de dados utilizada foi a base MySQL. A estrutura da base de dados para
+o sistema em questão está descrita na pasta "database" sendo composta, atualmente,
+por uma tabela de usuários.
 
 *******************
-Server Requirements
+Requerimentos do servidor
 *******************
 
-PHP version 5.6 or newer is recommended.
+PHP versão 5.6 ou mais nova é recomendada.
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+MySQL (MariaDB) versão 10.4.11-MariaDB utilizando o usuário "root" sem senha.
+
+O framework utilizado é o CodeIgniter versão 3.1.11 já incluída no projeto.
 
 ************
-Installation
+Instalação
 ************
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
+Realizar o download do pacote XAMPP em https://www.apachefriends.org/index.html
+e realizar a instalação do ambiente de desenvolvimento PHP já incluído a base de
+dados do MySQL.
+
+O usuário deve entrar na pasta "htdocs" após o final da instalação do XAMPP e realizar
+o clone do repositório para este local através do GitBash ou outro aplicativo.
+O comando para realização do clone é "git clone https://github.com/DanielsonSilva/sebraematchup.git".
+
+Realizar o download de software e manutenção de banco de dados como o DBeaver
+versão 6.2.4 (https://dbeaver.io/). Após terminar a instalação, iniciar o servidor do
+MySQL do pacote XAMPP e criar uma conexão através do software recém instalado.
+Neste software, criar a base de dados "sebraematchup" e criar a tabela de acordo
+com o código DDL que está no arquivo "database/usuarios.sql" dentro do repositório.
+
+Após estes passos, iniciar o servidor Apache através do XAMPP e colocar o seguinte
+endereço no seu navegador: "http://localhost/sebraematchup/" e começar a utilizar
+o sistema!
 
 *******
-License
+Licença
 *******
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+Verificar o arquivo LICENSE do respositório.

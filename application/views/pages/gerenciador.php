@@ -4,7 +4,7 @@
          <div class="container">
             <div class="justify-center">
                <div class="row">
-                  
+
                      <div class="col-sm-2">
                          <img id="imgPerfil" src="../../public/img/avatar.jpeg" width="120px">
                      </div>
@@ -20,6 +20,7 @@
                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Preciso de ajuda</a>
                          </div>
                            <div class="tab-content" id="v-pills-tabContent">
+<<<<<<< HEAD
 
                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                                  <div class="card" >
@@ -49,6 +50,14 @@
                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
                               <div class="card">
                                  <img src="../../public/img/especialista.jpeg" class="card-img-top" alt="...">
+=======
+                           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"></div>
+
+                           <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
+                           <div class="card" style="width: 18rem;">
+                                 <img src="https://m.sebrae.com.br/Sebrae/Portal%20Sebrae/Imagens%20SebraeNA/Banner_700X300_0001.jpg" class="card-img-top" alt="...">
+>>>>>>> 9a79b517bc840100f386d15400db1373dc81d3c1
                                  <div class="card-body">
                                     <h5 class="card-title">Card title</h5>
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -61,6 +70,24 @@
                               </div>
                              </div>
 
+<<<<<<< HEAD
+=======
+                           <div class="card">
+    <img src="../../public/img/especialista.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="card-footer">
+       <a href="https://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/fale-com-um-especialista,0d8b0b019cfe5410VgnVCM1000003b74010aRCRD" class="btn btn-light"  target="_blank">
+      <small class="text-muted">Acesse</small>
+      </a>
+   </div>
+  </div>
+
+
+                           </div>
+>>>>>>> 9a79b517bc840100f386d15400db1373dc81d3c1
                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
                            </div>
 
@@ -117,11 +144,11 @@
                               </div>
                               <!-- Card -->
 
-                     </div> 
+                     </div>
 
                         <div class="col-sm-3"> <!-- Inicio Mapa -->
-                       
-   
+
+
                         <div id="map"></div>
                         <script>
                                  // Note: This example requires that you consent to location sharing when
@@ -167,9 +194,9 @@
                                  infoWindow.open(map);
                                  }
                               </script>
-                              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAdcVFMm8hiDaGvEuj3959lQROSkF0yEs&callback=initMap"
+                              <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAdcVFMm8hiDaGvEuj3959lQROSkF0yEs&callback=initMap"
                               async defer>
-                         </script>
+                         </script>-->
                       </div><!--Fim do Mapa-->
 
                         <div class="col-sm-3">
@@ -227,18 +254,24 @@
                               </div>
                               <!-- Card -->
 
+<<<<<<< HEAD
                      </div>   
                      
                      <div class="col-sm-3">
+=======
+                     </div>
+
+                     <div class="col-sm-3">tesr
+>>>>>>> 9a79b517bc840100f386d15400db1373dc81d3c1
                         </div>
 
                         <div class="col-sm-3">
                         </div>
 
-                 
+
                   </div>
 
-               
+
             </div>
 
 
@@ -259,7 +292,7 @@
                <div class="card-body">
                   <h5 class="card-title text-center">Perfil</h5>
                   <div class="form-label-group">
-               
+
                      <label for="Nome">Nome: <?= $usuarioLogado->nome ?></label><br />
                      <label for="Email">E-mail: <?= $usuarioLogado->email ?></label><br />
                      <label for="Celular">Celular: <?= $usuarioLogado->celular ?></label><br />
@@ -282,5 +315,8 @@
       </div>
    </div>
 </section>
+<<<<<<< HEAD
 
 -->
+=======
+>>>>>>> 9a79b517bc840100f386d15400db1373dc81d3c1
