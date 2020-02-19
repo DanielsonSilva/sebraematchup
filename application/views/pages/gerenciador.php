@@ -4,7 +4,7 @@
          <div class="container">
             <div class="justify-center">
                <div class="row">
-                  
+
                      <div class="col-sm-2">
                          <img id="imgPerfil" src="../../public/img/sebrae-logo-2.jpg" width="120px">
                      </div>
@@ -21,9 +21,9 @@
                          </div>
                            <div class="tab-content" id="v-pills-tabContent">
                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"></div>
-                              
+
                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                              
+
                            <div class="card" style="width: 18rem;">
                                  <img src="https://m.sebrae.com.br/Sebrae/Portal%20Sebrae/Imagens%20SebraeNA/Banner_700X300_0001.jpg" class="card-img-top" alt="...">
                                  <div class="card-body">
@@ -47,8 +47,8 @@
       </a>
    </div>
   </div>
-  
-                              
+
+
                            </div>
                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
                            </div>
@@ -106,11 +106,11 @@
                               </div>
                               <!-- Card -->
 
-                     </div> 
+                     </div>
 
                         <div class="col-sm-3"> <!-- Inicio Mapa -->
-                       
-   
+
+
                         <div id="map"></div>
                         <script>
                                  // Note: This example requires that you consent to location sharing when
@@ -156,9 +156,9 @@
                                  infoWindow.open(map);
                                  }
                               </script>
-                              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAdcVFMm8hiDaGvEuj3959lQROSkF0yEs&callback=initMap"
+                              <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAdcVFMm8hiDaGvEuj3959lQROSkF0yEs&callback=initMap"
                               async defer>
-                         </script>
+                         </script>-->
                       </div><!--Fim do Mapa-->
 
                         <div class="col-sm-3">
@@ -216,18 +216,18 @@
                               </div>
                               <!-- Card -->
 
-                     </div>   
-                     
+                     </div>
+
                      <div class="col-sm-3">tesr
                         </div>
 
                         <div class="col-sm-3">
                         </div>
 
-                 
+
                   </div>
 
-               
+
             </div>
 
 
@@ -248,7 +248,7 @@
                <div class="card-body">
                   <h5 class="card-title text-center">Perfil</h5>
                   <div class="form-label-group">
-               
+
                      <label for="Nome">Nome: <?= $usuarioLogado->nome ?></label><br />
                      <label for="Email">E-mail: <?= $usuarioLogado->email ?></label><br />
                      <label for="Celular">Celular: <?= $usuarioLogado->celular ?></label><br />
@@ -271,5 +271,3 @@
       </div>
    </div>
 </section>
-
-
