@@ -20,36 +20,47 @@
                            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Preciso de ajuda</a>
                          </div>
                            <div class="tab-content" id="v-pills-tabContent">
-                           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"></div>
-                              
-                           <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                              
-                           <div class="card" style="width: 18rem;">
-                                 <img src="https://m.sebrae.com.br/Sebrae/Portal%20Sebrae/Imagens%20SebraeNA/Banner_700X300_0001.jpg" class="card-img-top" alt="...">
-                                 <div class="card-body">
-                                    <h5 class="card-title">Dicas Sebrae</h5>
-                                    <p class="card-text">Série composta de 10 vídeos ensina futuros empresários os passos para abrir uma empresa e as características empreendedoras que podem facilitar esse processo.</p>
-                                    <a href="https://m.sebrae.com.br/sites/PortalSebrae/artigos/artigoshome/10-dicas-para-comecar-bem,c098d8e04c09d410VgnVCM1000003b74010aRCRD" class="btn btn-primary"  target="_blank">Acesse</a>
-                                 </div>
-                                 </div>
-                           </div>
-                           <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
 
-                           <div class="card">
-    <img src="../../public/img/especialista.jpeg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-       <a href="https://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/fale-com-um-especialista,0d8b0b019cfe5410VgnVCM1000003b74010aRCRD" class="btn btn-light"  target="_blank">
-      <small class="text-muted">Acesse</small>
-      </a>
-   </div>
-  </div>
-  
-                              
+                           <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                 <div class="card" >
+                                          <img src="../../public/img/avatar.jpeg" class="card-img-top" alt="...">
+                                       <div class="card-body">
+                                          <h5 class="card-title"><?= $usuarioLogado->nome ?></h5>
+                                          <p class="card-text">Série composta de 10 vídeos ensina futuros empresários os passos para abrir uma empresa e as características empreendedoras que podem facilitar esse processo.</p>
+                                          <a href="https://m.sebrae.com.br/sites/PortalSebrae/artigos/artigoshome/10-dicas-para-comecar-bem,c098d8e04c09d410VgnVCM1000003b74010aRCRD" class="btn btn-primary"  target="_blank">Acesse</a>
+                                       </div>
+                                 </div>
+                           
                            </div>
+
+                           <!-- Card Dicas Sebrae -->   
+                           <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                              <div class="card" >
+                                    <img src="https://m.sebrae.com.br/Sebrae/Portal%20Sebrae/Imagens%20SebraeNA/Banner_700X300_0001.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Dicas Sebrae</h5>
+                                       <p class="card-text">Série composta de 10 vídeos ensina futuros empresários os passos para abrir uma empresa e as características empreendedoras que podem facilitar esse processo.</p>
+                                       <a href="https://m.sebrae.com.br/sites/PortalSebrae/artigos/artigoshome/10-dicas-para-comecar-bem,c098d8e04c09d410VgnVCM1000003b74010aRCRD" class="btn btn-primary"  target="_blank">Acesse</a>
+                                    </div>
+                               </div>
+                           </div>
+                           <!--Fin card dica Sebrae-->
+
+                           <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                              <div class="card">
+                                 <img src="../../public/img/especialista.jpeg" class="card-img-top" alt="...">
+                                 <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                 </div>
+                                 <div class="card-footer">
+                                    <a href="https://www.sebrae.com.br/sites/PortalSebrae/sebraeaz/fale-com-um-especialista,0d8b0b019cfe5410VgnVCM1000003b74010aRCRD" class="btn btn-light"  target="_blank">
+                                    <small class="text-muted">Acesse</small>
+                                    </a>
+                                 </div>
+                              </div>
+                             </div>
+
                            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
                            </div>
 
@@ -64,15 +75,15 @@
                               <div class="card-body d-flex flex-row">
 
                               <!-- Avatar -->
-                              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+                              <img src="../../public/img/avatar.jpeg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
 
                               <!-- Content -->
                               <div>
 
                                  <!-- Title -->
-                                 <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                                 <h4 class="card-title font-weight-bold mb-2">De domestica a empresaria.</h4>
                                  <!-- Subtitle -->
-                                 <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+                                 <p class="card-text"><i class="far fa-clock pr-2"></i>17/02/2020</p>
 
                               </div>
 
@@ -80,7 +91,7 @@
 
                               <!-- Card image -->
                               <div class="view overlay">
-                              <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                              <iframe width="450" height="275" src="https://www.youtube.com/embed/tpkGViDDTbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                               <a href="#!">
                                  <div class="mask rgba-white-slight"></div>
                               </a>
@@ -180,7 +191,7 @@
                               <div>
 
                                  <!-- Title -->
-                                 <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                                 <h4 class="card-title font-weight-bold mb-2">Dica para se tornar ei</h4>
                                  <!-- Subtitle -->
                                  <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
 
@@ -190,7 +201,7 @@
 
                               <!-- Card image -->
                               <div class="view overlay">
-                              <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                              <iframe width="450" height="275" src="https://www.youtube.com/embed/8HBEzWdgvQk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                               <a href="#!">
                                  <div class="mask rgba-white-slight"></div>
                               </a>
@@ -218,7 +229,7 @@
 
                      </div>   
                      
-                     <div class="col-sm-3">tesr
+                     <div class="col-sm-3">
                         </div>
 
                         <div class="col-sm-3">
