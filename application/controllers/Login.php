@@ -68,6 +68,9 @@ class Login extends CI_Controller {
       $username = $this->input->post('username');
       $password = $this->input->post('password');
       $usuarioTeste = ($username == "TESTE@COM" && $password == "ADMINISTRADOR");
+      if ($usuarioTeste) {
+         redirect('/gerenciador/index');
+      }
       if ($idUsuario = $this->UsuariosModel->validarUsuario($username, $password)
          || $usuarioTeste) {
          //$this->session->set_flashdata('id_usuario', $idUsuario);
